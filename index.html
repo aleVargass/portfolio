@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/variables.css">
+    <link rel="stylesheet" href="styles/globals.css">
+    <link rel="stylesheet" href="styles/menu.css">
+    <link rel="stylesheet" href="styles/welcome-section.css">
+    <link rel="stylesheet" href="styles/projects-section.css">
+    <link rel="stylesheet" href="styles/contact-section.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <title>Ale Vargas</title>
+</head>
+
+<!-- at least 1 media query -->
+
+<body>
+    <header class="header">
+        <a id="header-title" href="#" data-text="Ale Vargas">
+            Ale Vargas
+        </a>
+        <!-- id=navbar -->
+        <!-- should always be at the top of the viewport -->
+        <!-- at least 1 link to navigate to the section -->
+        <nav id="navbar">
+            <a href="#welcome-section" class="header-item" data-text="About">
+                About
+            </a>
+            <a href="#projects" class="header-item" data-text="Projects">
+                Projects
+            </a>
+            <a href="#contact-section" class="header-item" data-text="Contact">
+                Contact
+            </a>
+        </nav>
+        <i id="hamburger" class="fas fa-bars"></i>
+    </header>
+    <div id="menu-mobile">
+        <a href="#welcome-section" class="mobile-item" data-text="About">
+            About
+        </a>
+        <a href="#projects" class="mobile-item" data-text="Projects">
+            Projects
+        </a>
+        <a href="#contact-section" class="mobile-item" data-text="Contact">
+            Contact
+        </a>
+    </div>
+    <div class="overlay"></div>
+
+    <main>
+        <!-- section id=welcome-section-->
+        <!-- height welcome-section === heigh of the viewport -->
+        <section id="welcome-section">
+            <picture>
+                <source class="hero-img" srcset="assets/hero/mobile.png" media="(max-width: 425px)">
+                <source class="hero-img" srcset="assets/hero/tablet.jpg" media="(max-width: 768px)">
+                <img class="hero-img" src="assets/hero/desktop.jpg">
+            </picture>
+            <!--  h1-->
+            <h1 id="name">Ale Vargas<span id="description"><br>Autodidact Developer</span></h1>
+
+        </section>
+
+        <!-- section id=projects -->
+        <section id="projects">
+            <h2 id="projects__header">My Projects</h2>
+            <div id="projects__grid">
+                <a href="#" class="project-tile">
+                    <img src="assets/projects/tribute-page.jpg" alt="">
+                    Tribute page
+                </a>
+                <!-- at least one element class=project-tile -->
+                <!-- at least one link -->
+                <a href="#" class="project-tile">
+                    <img src="assets/projects/survey-form.jpg" alt="">
+                    Survey form
+                </a>
+                <a href="#" class="project-tile">
+                    <img src="assets/projects/product-landing-page.jpg" alt="">
+                    Product landing page
+                </a>
+                <a href="#" class="project-tile">
+                    <img src="assets/projects/technical-documentation-page.jpg" alt="">
+                    Technical doc page
+                </a>
+                <a href="#" class="project-tile">
+                    <img src="assets/projects/DOM-exercises.jpg" alt="">
+                    DOM exercises
+                </a>
+            </div>
+        </section>
+
+        <section id="contact-section">
+            <h2 id="contact-title">Work together?</h2>
+            <div class="line-gradient"></div>
+            <div id="icons-container">
+                <a href="#" target="_blank" rel="noopener">
+                    <figure>
+                        <i class="fab fa-codepen icon-contact"></i>
+                        <figcaption>CodePen</figcaption>
+                    </figure>
+                </a>
+                <a href="#" target="_blank" rel="noopener">
+                    <figure>
+                        <i class="fab fa-linkedin-in icon-contact"></i>
+                        <figcaption>Linkedin</figcaption>
+                    </figure>
+                </a>
+                <a href="#" target="_blank" rel="noopener">
+                    <figure>
+                        <i class="fas fa-envelope icon-contact"></i>
+                        <figcaption>Gmail</figcaption>
+                    </figure>
+                </a>
+                <!-- 1 link id=profile-link -->
+                <a href="https://www.freecodecamp.org/seclet" target="_blank" rel="noopener" id="profile-link">
+                    <figure>
+                        <i class="fab fa-free-code-camp icon-contact"></i>
+                        <figcaption>freeCodeCamp</figcaption>
+                    </figure>
+                </a>
+            </div>
+            <div class="line-gradient"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© <time>2021</time> Ale Vargas. All rights reserved.</p>
+    </footer>
+    <script src="scripts/hamburger-btn.js"></script>
+    <script src="https://kit.fontawesome.com/31472ae095.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

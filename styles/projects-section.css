@@ -1,0 +1,101 @@
+#projects__header {
+    display: flex;
+    justify-content: center;
+    margin-top: 15vw;
+    margin-bottom: 7.5vw;
+    padding-top: 2vw;
+    font-size: 8vw;
+    background: linear-gradient(90deg, #12c2e9,#c471ed, #f64f59); 
+    /* background: linear-gradient(); debe de colocarse arriba de -webkit-background-clip: text; */
+    background-size: 200%;
+    background-clip: border-box;
+    -webkit-background-clip: text;  
+    color: transparent;
+    animation: gradient-move 5s ease infinite;
+}
+
+@keyframes gradient-move {
+    0% {
+        background-position: 0%;
+    }
+    50% {
+        background-position: 100% 0%;
+    }
+    100% {
+        background-position: 0%;
+    }
+}
+
+#projects__grid {
+    pointer-events: none;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+}
+
+.project-tile{
+    pointer-events: auto;
+    border-radius: 6px;
+    transition: all 325ms;
+    /* text */
+    text-align: center;
+    font-size: 3vw;
+    line-height: 7vw;
+    padding-bottom: 2vw;
+    text-decoration: none;
+    color: var(--black-color);
+    background-color: var(--white-color);
+}
+
+.project-tile:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#projects__grid:hover .project-tile:not(:hover) {
+    opacity: .25;
+}
+
+.project-tile img{
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+@media (min-width: 426px) {
+    #projects__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .project-tile {
+        padding-bottom: 1.75vw;
+        font-size: 2.75vw;
+        line-height: 5vw;
+    }
+}
+
+@media (min-width: 769px) {
+    #projects__grid {
+        padding: 0 32px;
+    }
+
+    .project-tile {
+        padding-bottom: 1vw;
+        font-size: 2.25vw;
+        line-height: 4vw;
+    }
+}
+
+@media (min-width: 1025px) {
+    #projects__grid {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 0 64px;
+    }
+
+    .project-tile {
+        padding-bottom: .5vw;
+        font-size: 1vw;
+        line-height: 2.5vw;
+    }
+}
