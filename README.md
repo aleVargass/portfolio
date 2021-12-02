@@ -9,4 +9,4 @@ Hi! :hand: I´m Ale Vargas and this is my porfolio.
   <li>Figma</li>
   <li>Git</li>
 </ul>
-Check it in https://alevargass.github.io/ale-vargas.github.io/ or in the section enviroments! :ok_hand:
+Check it in https://alevargass.github.io/ale-vargas.github.io/ :ok_hand:
