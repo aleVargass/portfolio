@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -9,7 +9,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/variables.css">
-    <link rel="stylesheet" href="styles/globals.css">
     <link rel="stylesheet" href="styles/menu.css">
     <link rel="stylesheet" href="styles/welcome-section.css">
     <link rel="stylesheet" href="styles/projects-section.css">
@@ -29,28 +28,17 @@
         <!-- should always be at the top of the viewport -->
         <!-- at least 1 link to navigate to the section -->
         <nav id="navbar">
-            <a href="#welcome-section" class="header-item" data-text="About">
-                About
-            </a>
-            <a href="#projects" class="header-item" data-text="Projects">
-                Projects
-            </a>
-            <a href="#contact-section" class="header-item" data-text="Contact">
-                Contact
-            </a>
+            <a href="#welcome-section" class="header-item" data-text="About">Welcome</a>
+            <a href="#projects-section" class="header-item" data-text="Projects">Projects</a>
+            <a href="#contact-section" class="header-item" data-text="Contact">Contact</a>
         </nav>
-        <i id="hamburger" class="fas fa-bars"></i>
+        <i id="hamburger" class="fa-solid fa-bars"></i>
     </header>
+
     <div id="menu-mobile">
-        <a href="#welcome-section" class="mobile-item" data-text="About">
-            About
-        </a>
-        <a href="#projects" class="mobile-item" data-text="Projects">
-            Projects
-        </a>
-        <a href="#contact-section" class="mobile-item" data-text="Contact">
-            Contact
-        </a>
+        <a href="#welcome-section" class="mobile-item" data-text="About">Welcome</a>
+        <a href="#projects-section" class="mobile-item" data-text="Projects">Projects</a>
+        <a href="#contact-section" class="mobile-item" data-text="Contact">Contact</a>
     </div>
     <div class="overlay"></div>
 
@@ -58,10 +46,10 @@
         <!-- section id=welcome-section-->
         <!-- height welcome-section === heigh of the viewport -->
         <section id="welcome-section">
-            <picture>
+            <picture class="pictures">
                 <source class="hero-img" srcset="assets/hero/mobile.png" media="(max-width: 425px)">
                 <source class="hero-img" srcset="assets/hero/tablet.jpg" media="(max-width: 768px)">
-                <img class="hero-img" src="assets/hero/desktop.jpg">
+                <img class="hero-img" src="assets/hero/desktop.jpg" alt="">
             </picture>
             <!--  h1-->
             <h1 id="name">Ale Vargas<span id="description"><br>Autodidact Developer</span></h1>
@@ -69,74 +57,65 @@
         </section>
 
         <!-- section id=projects -->
-        <section id="projects">
-            <h2 id="projects__header">My Projects</h2>
+        <section id="projects-section">
+            <h2 id="projects__h2">My Projects</h2>
             <div id="projects__grid">
                 <a href="#" class="project-tile">
-                    <img src="assets/projects/tribute-page.jpg" alt="">
+                    <img class="project-tile__img" src="assets/projects/domExercises.webp" alt="page about dom exercises">
+                    DOM exercises
+                </a>
+                <a href="#" class="project-tile">
+                    <img class="project-tile__img" src="assets/projects/tribute-page.webp" alt="tribute page to alan turing">
                     Tribute page
                 </a>
                 <!-- at least one element class=project-tile -->
                 <!-- at least one link -->
                 <a href="#" class="project-tile">
-                    <img src="assets/projects/survey-form.jpg" alt="">
+                    <img class="project-tile__img" src="assets/projects/survey-form.webp" alt="survey form">
                     Survey form
                 </a>
                 <a href="#" class="project-tile">
-                    <img src="assets/projects/product-landing-page.jpg" alt="">
+                    <img class="project-tile__img" src="assets/projects/product-landing-page.webp" alt="landing page about shamisen">
                     Product landing page
                 </a>
                 <a href="#" class="project-tile">
-                    <img src="assets/projects/technical-documentation-page.jpg" alt="">
+                    <img class="project-tile__img" src="assets/projects/technical-documentation-page.webp" alt="documentaion page about python">
                     Technical doc page
-                </a>
-                <a href="#" class="project-tile">
-                    <img src="assets/projects/DOM-exercises.jpg" alt="">
-                    DOM exercises
                 </a>
             </div>
         </section>
 
         <section id="contact-section">
-            <h2 id="contact-title">Work together?</h2>
+            <h2 id="contact-section__h2">Work together?</h2>
             <div class="line-gradient"></div>
             <div id="icons-container">
-                <a href="#" target="_blank" rel="noopener">
-                    <figure>
+                <a class="contact-section__icon" href="https://codepen.io/your-work/" target="_blank" rel="noopener">
                         <i class="fab fa-codepen icon-contact"></i>
-                        <figcaption>CodePen</figcaption>
-                    </figure>
+                        CodePen
                 </a>
-                <a href="#" target="_blank" rel="noopener">
-                    <figure>
+                <a class="contact-section__icon" href="https://www.linkedin.com/in/alejandro-vargas-quevedo-a27112190/" target="_blank" rel="noopener">
                         <i class="fab fa-linkedin-in icon-contact"></i>
-                        <figcaption>Linkedin</figcaption>
-                    </figure>
+                        Linkedin
                 </a>
-                <a href="#" target="_blank" rel="noopener">
-                    <figure>
-                        <i class="fas fa-envelope icon-contact"></i>
-                        <figcaption>Gmail</figcaption>
-                    </figure>
+                <a class="contact-section__icon" href="https://mail.google.com/mail/u/2/#inbox?compose=GTvVlcRwPVmtkbGpZTbxwSDMWhxFNqFDlNHKldxPwzjTpdzmbMhRjnHcNSXtPPlnVgLScPzqNFjnH" target="_blank" rel="noopener">
+                        <i class="fa-solid fa-envelope icon-contact"></i>
+                        Gmail
                 </a>
                 <!-- 1 link id=profile-link -->
-                <a href="https://www.freecodecamp.org/seclet" target="_blank" rel="noopener" id="profile-link">
-                    <figure>
+                <a class="contact-section__icon" href="https://www.freecodecamp.org/seclet" target="_blank" rel="noopener" id="profile-link">
                         <i class="fab fa-free-code-camp icon-contact"></i>
-                        <figcaption>freeCodeCamp</figcaption>
-                    </figure>
+                        freeCodeCamp
                 </a>
             </div>
             <div class="line-gradient"></div>
         </section>
     </main>
 
-    <footer>
+    <footer class="footer">
         <p>© <time>2021</time> Ale Vargas. All rights reserved.</p>
     </footer>
-    <script src="scripts/hamburger-btn.js"></script>
-    <script src="https://kit.fontawesome.com/31472ae095.js" crossorigin="anonymous"></script>
-
+    <script src="https://kit.fontawesome.com/7f3051e63a.js" crossorigin="anonymous"></script>
+    <script src="./scripts/hamburger-btn.js"></script>
 </body>
 
 </html>

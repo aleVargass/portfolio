@@ -1,11 +1,10 @@
 #welcome-section {
     position: relative;
     display: block;
-    top: 13vw;
-    height: 100%; /* requerimiento*/
+    height: 100%; /* required*/
 }
 
-picture {
+.picture {
     display: block;
     font-size: 0;
 }

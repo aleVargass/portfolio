@@ -1,10 +1,9 @@
-#projects__header {
+#projects__h2 {
     display: flex;
     justify-content: center;
-    margin-top: 15vw;
-    margin-bottom: 7.5vw;
-    padding-top: 2vw;
-    font-size: 8vw;
+    padding-top: 15vw;
+    padding-bottom: 7.5vw;
+    font-size: 14vw;
     background: linear-gradient(90deg, #12c2e9,#c471ed, #f64f59); 
     /* background: linear-gradient(); debe de colocarse arriba de -webkit-background-clip: text; */
     background-size: 200%;
@@ -30,21 +29,19 @@
     pointer-events: none;
     display: grid;
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: 24px;
 }
 
 .project-tile{
     pointer-events: auto;
-    border-radius: 6px;
     transition: all 325ms;
     /* text */
     text-align: center;
-    font-size: 3vw;
-    line-height: 7vw;
-    padding-bottom: 2vw;
+    font-size: 5vw;
     text-decoration: none;
     color: var(--black-color);
     background-color: var(--white-color);
+    border: 1px solid lightgray;
 }
 
 .project-tile:hover {
@@ -56,11 +53,10 @@
     opacity: .25;
 }
 
-.project-tile img{
+.project-tile__img{
+    border-bottom: 1px solid lightgray;
     width: 100%;
     height: auto;
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
 }
 
 @media (min-width: 426px) {
@@ -71,7 +67,6 @@
     .project-tile {
         padding-bottom: 1.75vw;
         font-size: 2.75vw;
-        line-height: 5vw;
     }
 }
 
@@ -83,19 +78,23 @@
     .project-tile {
         padding-bottom: 1vw;
         font-size: 2.25vw;
-        line-height: 4vw;
     }
 }
 
 @media (min-width: 1025px) {
+    #projects__h2 {
+        font-size: 108px;
+        padding: 72px;
+    }
+
     #projects__grid {
         grid-template-columns: repeat(3, 1fr);
         padding: 0 64px;
     }
 
     .project-tile {
-        padding-bottom: .5vw;
-        font-size: 1vw;
-        line-height: 2.5vw;
+        padding-bottom: .25vw;
+        font-size: 1.5vw;
     }
+
 }

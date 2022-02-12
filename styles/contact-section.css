@@ -1,7 +1,6 @@
-#contact-title {
-    margin-top: 15vw;
-    margin-bottom: 7.5vw;
-    padding-top: 2vw;
+#contact-section__h2 {
+    padding-top: 15vw;
+    padding-bottom: 7.5vw;
     display: flex;
     justify-content: center;
     background: linear-gradient(90deg,#40E0D0,#FF8C00,#FF0080);
@@ -10,7 +9,7 @@
     background-clip: border-box;
     -webkit-background-clip: text;
     color: transparent;
-    font-size: 8vw;
+    font-size: 12vw;
 }
 
 .line-gradient {
@@ -23,25 +22,16 @@
 #icons-container {
     width: 100%;
     height: auto;
-    margin: 15vw 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 12vw;
+    padding: 5vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 7vw;
 }
 
-#icons-container a {
+.contact-section__icon {
+    font-size: 3.5vw;
     color: var(--black-color);
     text-decoration: none;
-}
-
-#icons-container figure {
-    display: flex;
-}
-
-#icons-container figure:hover {
-    opacity: .6;
 }
 
 .icon-contact {
@@ -52,12 +42,6 @@
     font-size: 8vw;
 }
 
-#icons-container figcaption {
-    display: flex;
-    align-items: center;
-    font-size: 3vw;
-}
-
 @media (min-width: 769px) {
     #icons-container {
         gap: 10vw;
@@ -65,12 +49,19 @@
 }
 
 @media (min-width: 1025px) {
+    #contact-section__h2 {
+        padding-top: 144px;
+        font-size: 108px;
+    }
+
+
     #icons-container {
         gap: 8vw;
     }
 
-    #icons-container figcaption {
-        font-size: 1vw;
+    .contact-section__icon {
+        margin-left: 7.5vw;
+        font-size: 1.5vw;
     }
 
     .icon-contact {

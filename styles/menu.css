@@ -1,19 +1,19 @@
 /* mobile */
 .header {
-    position: fixed;
-    width: 100%;
+    z-index: 5;
+    position: sticky;
+    top: 0;
     height: 13vw;
-    z-index: 10;
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: var(--white-color);
-    border-bottom: solid 1px var(--border-gray-color);
+    border-bottom: 1px solid var(--border-gray-color);
 }
 
 #header-title{
     margin-left: 6vw;
-    font-size: 4vw;
+    font-size: 4.5vw;
     color: var(--black-color);
     text-decoration: none;
     font-weight: 600;
@@ -26,23 +26,22 @@
 
 #hamburger{
     margin-right: 4vw;
-    font-size: 5vw;
+    font-size: 5.25vw;
 }
 
 #menu-mobile {
     position: fixed;
-    top: -17rem;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 20%;
+    top: -300px;
     z-index: 5;
+    border-radius: 4px;
     background: var(--white-color);
-    border-radius: .5rem;
-    border: solid 1px var(--border-gray-color);
-    transition: all 400ms ease-in-out;
+    border: solid 1px var #000;
+    transition: transform 500ms ease;
 }
 
 #menu-mobile.display {
-    top: 12rem;
+    transform: translateY(70vh);
 }
 
 .mobile-item {
@@ -55,15 +54,19 @@
     color: var(--black-color);
 }
 
+body.overflowYHidden {
+    overflow-y: hidden;
+}
+
 .overlay {
+    z-index: 1;
     position: absolute;
     width: 100%;
-    height: 100vh;
-    z-index: 1;
+    height: 100%;
     visibility: hidden;
     opacity: 0;
-    background: linear-gradient(#303030, transparent);
-    transition: all 400ms ease-in-out;
+    background: #303030;
+    transition: all 500ms ease;
 }
 
 .overlay.visible {
@@ -71,9 +74,6 @@
     opacity: 1;
 }
 
-body.overflowYHidden {
-    overflow-y: hidden;
-}
 
 /* tablet */
 @media (min-width: 426px) {
@@ -114,11 +114,17 @@ body.overflowYHidden {
 /* desktop */
 @media (min-width: 769px) {
     .header {
-        justify-content: space-evenly;
+        justify-content: space-between;
     }
 
     #header-title {
-        margin-left: 0;
+        margin-left: 5vw;
+        font-size: 20px;
+    }
+
+    #navbar {
+        font-size: 18px;
+        margin-right: 5vw;
     }
 }
 
