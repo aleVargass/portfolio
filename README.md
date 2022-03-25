@@ -1,5 +1,5 @@
-# Ale Vargas portfolio :star:
+# Ale Vargas portfolio
 
-Hi! :hand: I´m Ale Vargas and this is my portfolio.
+I´m Ale Vargas and this is my portfolio. ✋
 
 I used: JS, CSS, Figma and Git
