@@ -1,6 +1,6 @@
-# Ale vargas porfolio :star:
+# Ale vargas portfolio :star:
 
-Hi! :hand: I´m Ale Vargas and this is my porfolio.
+Hi! :hand: I´m Ale Vargas and this is my portfolio.
 <ul>Techs used for this site
 <br><br>
   <li>HTML </li>
