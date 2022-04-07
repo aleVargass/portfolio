@@ -2,4 +2,4 @@
 
 I´m Ale Vargas and this is my portfolio. ✋
 
-I used: JS, CSS, Figma and Git
+I used: JS, SCSS, Figma and Git
