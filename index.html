@@ -1,118 +1,126 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio de Ale Vargas con los proyectos realizados y links de contacto a sus redes sociales">
+    <meta name="theme-color" content="#F3F3F3">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/variables.css">
-    <link rel="stylesheet" href="styles/menu.css">
-    <link rel="stylesheet" href="styles/welcome-section.css">
-    <link rel="stylesheet" href="styles/projects-section.css">
-    <link rel="stylesheet" href="styles/contact-section.css">
-    <link rel="stylesheet" href="styles/footer.css">
-    <title>Ale Vargas</title>
+    <link rel="stylesheet" href="styles/style.min.css">
+    <title>Ale Vargas</title> 
 </head>
 
-<!-- at least 1 media query -->
-
-<body>
-    <header class="header">
-        <a id="header-title" href="#" data-text="Ale Vargas">
-            Ale Vargas
-        </a>
-        <!-- id=navbar -->
-        <!-- should always be at the top of the viewport -->
-        <!-- at least 1 link to navigate to the section -->
-        <nav id="navbar">
-            <a href="#welcome-section" class="header-item" data-text="About">Welcome</a>
-            <a href="#projects-section" class="header-item" data-text="Projects">Projects</a>
-            <a href="#contact-section" class="header-item" data-text="Contact">Contact</a>
+<body id="body">
+    <!-- HEADER -->
+    <header id="header">
+        <h1 id="header__title" href="#"><a href="#">Ale Vargas</a></h1>
+        <nav id="nav-desktop">
+            <a href="#welcome" class="nav-desktop__item">Welcome</a>
+            <a href="#projects" class="nav-desktop__item">Projects</a>
+            <a href="#contact" class="nav-desktop__item">Contact</a>
         </nav>
         <i id="hamburger" class="fa-solid fa-bars"></i>
     </header>
 
-    <div id="menu-mobile">
-        <a href="#welcome-section" class="mobile-item" data-text="About">Welcome</a>
-        <a href="#projects-section" class="mobile-item" data-text="Projects">Projects</a>
-        <a href="#contact-section" class="mobile-item" data-text="Contact">Contact</a>
+    <div id="nav-mobile">
+        <a href="#welcome" class="nav-mobile__item">Welcome</a>
+        <a href="#projects" class="nav-mobile__item">Projects</a>
+        <a href="#contact" class="nav-mobile__item">Contact</a>
     </div>
-    <div class="overlay"></div>
+    <div id="overlay"></div>
 
     <main>
-        <!-- section id=welcome-section-->
-        <!-- height welcome-section === heigh of the viewport -->
-        <section id="welcome-section">
-            <picture class="pictures">
-                <source class="hero-img" srcset="assets/hero/mobile.png" media="(max-width: 425px)">
-                <source class="hero-img" srcset="assets/hero/tablet.jpg" media="(max-width: 768px)">
-                <img class="hero-img" src="assets/hero/desktop.jpg" alt="">
-            </picture>
-            <!--  h1-->
-            <h1 id="name">Ale Vargas<span id="description"><br>Autodidact Developer</span></h1>
-
+        <!-- WELCOME -->
+        <section id="welcome">
+                <div id="hero">
+                    <div id="hero__text">
+                        <h2>I am Ale Vargas</h2>
+                        <p>A self-taugh developer and coffee lover</p>
+                    </div>
+                </div>
         </section>
 
-        <!-- section id=projects -->
-        <section id="projects-section">
-            <h2 id="projects__h2">My Projects</h2>
-            <div id="projects__grid">
-                <a href="https://alevargass.github.io/DOM-exercises.github.io/" class="project-tile">
-                    <img class="project-tile__img" src="assets/projects/domExercises.webp" alt="page about dom exercises">
-                    DOM exercises
-                </a>
-                <a href="https://alevargass.github.io/alan-turing.github.io/" class="project-tile">
-                    <img class="project-tile__img" src="assets/projects/tribute-page.webp" alt="tribute page to alan turing">
-                    Tribute page
-                </a>
-                <!-- at least one element class=project-tile -->
-                <!-- at least one link -->
-                <a href="https://alevargass.github.io/survey-form.github.io/" class="project-tile">
-                    <img class="project-tile__img" src="assets/projects/survey-form.webp" alt="survey form">
-                    Survey form
-                </a>
-                <a href="https://alevargass.github.io/SHAMI.github.io/" class="project-tile">
-                    <img class="project-tile__img" src="assets/projects/product-landing-page.webp" alt="landing page about shamisen">
-                    Product landing page
-                </a>
-                <a href="https://alevargass.github.io/doc-page.github.io/" class="project-tile">
-                    <img class="project-tile__img" src="assets/projects/technical-documentation-page.webp" alt="documentaion page about python">
-                    Technical doc page
-                </a>
+        <!-- PROJECTS -->
+        <section id="projects">
+            <h3 id="projects__heading">My Projects</h3>
+            <div id="projects-grid">
+                <figure class="project">
+                    <a href="https://alevargass.github.io/react-markdown-previewer/" target="_blank">
+                        <img class="project__img" src="assets/projects/react-markdown-previewer.webp" width="320" height="181" alt="An online markdown previewer with react">
+                        <figcaption class="project__figcaption">React markdown previewer</figcaption>
+                    </a>
+                </figure>   
+                <figure class="project">
+                    <a href="https://alevargass.github.io/random-quote-machine/" target="_blank">
+                        <img class="project__img" src="assets/projects/random-quote.webp" width="320" height="181" alt="Machine that throws a random quote">
+                        <figcaption class="project__figcaption">Random quote machine</figcaption>
+                    </a>
+                </figure>
+                <figure class="project">
+                    <a href="https://alevargass.github.io/dom-exercises/" target="_blank">
+                        <img class="project__img" src="assets/projects/javascript-exercises.webp" width="320" height="181" alt="Page about javascript exercises">
+                        <figcaption class="project__figcaption">Javascript exercises</figcaption>
+                    </a>
+                </figure>
+                <figure class="project">
+                    <a href="https://alevargass.github.io/python-documentation-page//" target="_blank">
+                        <img class="project__img" src="assets/projects/technical-documentation-page.webp" width="320" height="181" alt="Documentaion page about python">
+                        <figcaption class="project__figcaption">Documentation page: Python</figcaption>
+                    </a>
+                </figure>
+                <figure class="project">
+                    <a href="https://alevargass.github.io/tribute-page-Alan-Turing/" target="_blank">
+                        <img class="project__img" src="assets/projects/tribute-page.webp" width="320" height="181" alt="Tribute page to alan turing">
+                        <figcaption class="project__figcaption">Tribute page: Alan Turing</figcaption>
+                    </a>
+                </figure>
+                <figure class="project">
+                    <a href="https://alevargass.github.io/survey-form/" target="_blank">
+                        <img class="project__img" src="assets/projects/survey-form.webp" width="320" height="181" alt="Survey form about technologies">
+                        <figcaption class="project__figcaption">Survey form</figcaption>
+                    </a>
+                </figure>
+                <figure class="project">
+                    <a href="https://alevargass.github.io/shami" target="_blank">
+                        <img class="project__img" src="assets/projects/product-landing-page.webp" width="320" height="181" alt="Landing page about shamisens">
+                        <figcaption class="project__figcaption">Product landing page</figcaption>
+                    </a>
+                </figure>
             </div>
         </section>
-
-        <section id="contact-section">
-            <h2 id="contact-section__h2">Work together?</h2>
+        
+        <!-- CONTACT -->
+        <section id="contact">
+            <h2 id="contact__heading">Work together?</h2>
             <div class="line-gradient"></div>
-            <div id="icons-container">
-                <a class="contact-section__icon" href="https://codepen.io/your-work/" target="_blank" rel="noopener">
-                        <i class="fab fa-codepen icon-contact"></i>
+            <div id="link-container">
+                <a class="link-container-link" href="https://codepen.io/your-work/" target="_blank">
+                        <i class="fab fa-codepen link-container-link__icon"></i>
                         CodePen
                 </a>
-                <a class="contact-section__icon" href="https://www.linkedin.com/in/alejandro-vargas-quevedo-a27112190/" target="_blank" rel="noopener">
-                        <i class="fab fa-linkedin-in icon-contact"></i>
+                <a class="link-container-link" href="https://www.linkedin.com/in/alejandro-vargas-quevedo-a27112190/" target="_blank">
+                        <i class="fab fa-linkedin-in link-container-link__icon"></i>
                         Linkedin
                 </a>
-                <a class="contact-section__icon" href="https://mail.google.com/mail/u/2/#inbox?compose=GTvVlcRwPVmtkbGpZTbxwSDMWhxFNqFDlNHKldxPwzjTpdzmbMhRjnHcNSXtPPlnVgLScPzqNFjnH" target="_blank" rel="noopener">
-                        <i class="fa-solid fa-envelope icon-contact"></i>
+                <a class="link-container-link" href="https://mail.google.com/mail/u/2/#inbox?compose=GTvVlcRwPVmtkbGpZTbxwSDMWhxFNqFDlNHKldxPwzjTpdzmbMhRjnHcNSXtPPlnVgLScPzqNFjnH" target="_blank">
+                        <i class="fa-solid fa-envelope link-container-link__icon"></i>
                         Gmail
                 </a>
-                <!-- 1 link id=profile-link -->
-                <a class="contact-section__icon" href="https://www.freecodecamp.org/alejandro-vargas" target="_blank" rel="noopener" id="profile-link">
-                        <i class="fab fa-free-code-camp icon-contact"></i>
-                        freeCodeCamp
+                <a class="link-container-link" href="https://github.com/aleVargass" target="_blank" id="profile-link">
+                        <i class="fa-brands fa-github link-container-link__icon"></i>
+                        GitHub
                 </a>
             </div>
             <div class="line-gradient"></div>
         </section>
     </main>
 
-    <footer class="footer">
-        <p>© <time>2021</time> Ale Vargas. All rights reserved.</p>
+    <!-- FOOTER -->
+    <footer id="footer">
+        <p>© <time>2022</time> Ale Vargas. All rights reserved.</p>
     </footer>
     <script src="https://kit.fontawesome.com/7f3051e63a.js" crossorigin="anonymous"></script>
     <script src="./scripts/hamburger-btn.js"></script>
